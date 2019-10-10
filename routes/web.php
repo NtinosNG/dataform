@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    // Testing fetching data from the forms table
+
+    // $Forms = DB::Table('forms')->get();
+    // return $Forms;
+
+    return view('main');
 });

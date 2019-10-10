@@ -10,10 +10,12 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="/css/app.css" rel="stylesheet" type="text/css">            
     </head>
     <body>
-       <div id="example"></div>
+       <div id="dataformApp"></div>
        <script src="/js/app.js"></script>
+     
     </body>
 </html>

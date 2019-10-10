@@ -69012,7 +69012,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
  */
 
 
-__webpack_require__(/*! ./components/Example */ "./resources/js/components/Example.js");
+__webpack_require__(/*! ./components/DataformApp */ "./resources/js/components/DataformApp.js");
 
 /***/ }),
 
@@ -69061,10 +69061,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/components/Example.js":
-/*!********************************************!*\
-  !*** ./resources/js/components/Example.js ***!
-  \********************************************/
+/***/ "./resources/js/components/DataformApp.js":
+/*!************************************************!*\
+  !*** ./resources/js/components/DataformApp.js ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -69077,86 +69077,137 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Example() {
+function DataformApp() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container"
+    className: "container",
+    id: "mycontainer"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row justify-content-center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-8"
+    className: "col-md-8",
+    id: "mycol"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "class": "accordion",
-    id: "accordionExample"
+    id: "accordionMain"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card"
+    "class": "card",
+    id: "my-card"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card-header",
+    "class": "my-card-header",
     id: "headingOne"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
     "class": "mb-0"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    "class": "btn btn-link",
-    type: "button",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "card-heading",
+    role: "button",
     "data-toggle": "collapse",
     "data-target": "#collapseOne",
     "aria-expanded": "true",
     "aria-controls": "collapseOne"
-  }, "Collapsible Group Item #1"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Step 1: Your details"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "collapseOne",
     "class": "collapse show",
     "aria-labelledby": "headingOne",
-    "data-parent": "#accordionExample"
+    "data-parent": "#accordionMain"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card-body"
-  }, "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card"
+    "class": "card-body",
+    id: "my-card-body"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card-header",
+    "class": "col-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    id: "text-field-title"
+  }, "First Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "text-field",
+    type: "text",
+    name: "firstname"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "col-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    id: "text-field-title"
+  }, "Surname"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "text-field",
+    type: "text",
+    name: "lastname"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "col-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    id: "text-field-title"
+  }, "Email Address"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    id: "text-field",
+    type: "text",
+    name: "email"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "row"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "col-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    id: "next-btn",
+    type: "button"
+  }, "Next ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    "class": "fa fa-angle-right"
+  })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "mybreak"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "card",
+    id: "my-card"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "my-card-header",
     id: "headingTwo"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
     "class": "mb-0"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    "class": "btn btn-link collapsed",
-    type: "button",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "card-heading",
+    "class": "collapsed",
+    role: "button",
     "data-toggle": "collapse",
     "data-target": "#collapseTwo",
     "aria-expanded": "false",
     "aria-controls": "collapseTwo"
-  }, "Collapsible Group Item #2"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Step 2: More comments"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "collapseTwo",
     "class": "collapse",
     "aria-labelledby": "headingTwo",
-    "data-parent": "#accordionExample"
+    "data-parent": "#accordionMain"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card-body"
-  }, "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card"
+    "class": "card-body",
+    id: "my-card-body"
+  }, "Second body"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "mybreak"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "card",
+    id: "my-card"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card-header",
+    "class": "my-card-header",
     id: "headingThree"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
     "class": "mb-0"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    "class": "btn btn-link collapsed",
-    type: "button",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "card-heading",
+    "class": "collapsed",
+    role: "button",
     "data-toggle": "collapse",
     "data-target": "#collapseThree",
     "aria-expanded": "false",
     "aria-controls": "collapseThree"
-  }, "Collapsible Group Item #3"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Step 3: Final comments"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "collapseThree",
     "class": "collapse",
     "aria-labelledby": "headingThree",
-    "data-parent": "#accordionExample"
+    "data-parent": "#accordionMain"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card-body"
-  }, "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.")))))));
+    "class": "card-body",
+    id: "my-card-body"
+  }, "Third body")))))));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Example);
+/* harmony default export */ __webpack_exports__["default"] = (DataformApp);
 
-if (document.getElementById('example')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Example, null), document.getElementById('example'));
+if (document.getElementById('dataformApp')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DataformApp, null), document.getElementById('dataformApp'));
 }
 
 /***/ }),
