@@ -15,7 +15,9 @@ class FormController extends Controller
      */
     public function index()
     {
-        $Forms = Form::all('first_name', 'surname');
+        // $Forms = Form::all('first_name', 'surname');
+        $Forms = Form::all();
+
 
         return response()->json($Forms);
     }
@@ -38,7 +40,25 @@ class FormController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'first_name' => 'required',
+            'surname' => 'required',
+            'email' => 'required',
+            'gender' => 'required',
+            'mobile_number' => 'required',
+            'birthday' => 'required'
+          ]);
+  
+          $form = Form::create([
+            'first_name' => $validatedData['first_name'],
+            'surname' => $validatedData['surname'],
+            'email' => $validatedData['email'],
+            'gender' => $validatedData['gender'],
+            'mobile_number' => $validatedData['mobile_number'],
+            'birthday' => $validatedData['birthday']
+          ]);
+  
+          return response()->json('Form information has been sumbitted!', $form);
     }
 
     /**
@@ -49,7 +69,9 @@ class FormController extends Controller
      */
     public function show($id)
     {
-        //
+          $form = Form::findOrFail($id);
+
+          return response()->json($form);
     }
 
     /**

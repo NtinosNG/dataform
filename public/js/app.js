@@ -69070,141 +69070,200 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return DataformApp; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
 
-function DataformApp() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
-    id: "mycontainer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-center"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-8",
-    id: "mycol"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "accordion",
-    id: "accordionMain"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card",
-    id: "my-card"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "my-card-header",
-    id: "headingOne"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    "class": "mb-0"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "card-heading",
-    role: "button",
-    "data-toggle": "collapse",
-    "data-target": "#collapseOne",
-    "aria-expanded": "true",
-    "aria-controls": "collapseOne"
-  }, "Step 1: Your details"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "collapseOne",
-    "class": "collapse show",
-    "aria-labelledby": "headingOne",
-    "data-parent": "#accordionMain"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card-body",
-    id: "my-card-body"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "row"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "col-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    id: "text-field-title"
-  }, "First Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    id: "text-field",
-    type: "text",
-    name: "firstname"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "col-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    id: "text-field-title"
-  }, "Surname"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    id: "text-field",
-    type: "text",
-    name: "lastname"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "row"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "col-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    id: "text-field-title"
-  }, "Email Address"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    id: "text-field",
-    type: "text",
-    name: "email"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "row"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "col-12"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    id: "next-btn",
-    type: "button"
-  }, "Next ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    "class": "fa fa-angle-right"
-  })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "mybreak"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card",
-    id: "my-card"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "my-card-header",
-    id: "headingTwo"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    "class": "mb-0"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "card-heading",
-    "class": "collapsed",
-    role: "button",
-    "data-toggle": "collapse",
-    "data-target": "#collapseTwo",
-    "aria-expanded": "false",
-    "aria-controls": "collapseTwo"
-  }, "Step 2: More comments"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "collapseTwo",
-    "class": "collapse",
-    "aria-labelledby": "headingTwo",
-    "data-parent": "#accordionMain"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card-body",
-    id: "my-card-body"
-  }, "Second body"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "mybreak"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card",
-    id: "my-card"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "my-card-header",
-    id: "headingThree"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    "class": "mb-0"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "card-heading",
-    "class": "collapsed",
-    role: "button",
-    "data-toggle": "collapse",
-    "data-target": "#collapseThree",
-    "aria-expanded": "false",
-    "aria-controls": "collapseThree"
-  }, "Step 3: Final comments"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "collapseThree",
-    "class": "collapse",
-    "aria-labelledby": "headingThree",
-    "data-parent": "#accordionMain"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "card-body",
-    id: "my-card-body"
-  }, "Third body")))))));
-}
 
-/* harmony default export */ __webpack_exports__["default"] = (DataformApp);
+
+var DataformApp =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(DataformApp, _Component);
+
+  function DataformApp() {
+    var _this;
+
+    _classCallCheck(this, DataformApp);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(DataformApp).call(this));
+    _this.state = {
+      forms: []
+    };
+    console.log(_this = _possibleConstructorReturn(this, _getPrototypeOf(DataformApp).call(this)));
+    return _this;
+  }
+
+  _createClass(DataformApp, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('api/form').then(function (Response) {
+        _this2.setState({
+          forms: Response.data
+        });
+      })["catch"](function (errors) {
+        console.log(errors);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container",
+        id: "mycontainer"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row justify-content-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-8",
+        id: "mycol"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "accordion",
+        id: "accordionMain"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card",
+        id: "my-card"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "my-card-header",
+        id: "headingOne"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "mb-0"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "card-heading",
+        role: "button",
+        "data-toggle": "collapse",
+        "data-target": "#collapseOne",
+        "aria-expanded": "true",
+        "aria-controls": "collapseOne"
+      }, "Step 1: Your details"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "collapseOne",
+        className: "collapse show",
+        "aria-labelledby": "headingOne",
+        "data-parent": "#accordionMain"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card-body",
+        id: "my-card-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        id: "text-field-title"
+      }, "First Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "text-field",
+        type: "text",
+        name: "firstname"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        id: "text-field-title"
+      }, "Surname"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "text-field",
+        type: "text",
+        name: "lastname"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        id: "text-field-title"
+      }, "Email Address"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "text-field",
+        type: "text",
+        name: "email"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "next-btn",
+        type: "button"
+      }, "Next ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fa fa-angle-right"
+      })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "mybreak"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card",
+        id: "my-card"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "my-card-header",
+        id: "headingTwo"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "mb-0"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "card-heading",
+        className: "collapsed",
+        role: "button",
+        "data-toggle": "collapse",
+        "data-target": "#collapseTwo",
+        "aria-expanded": "false",
+        "aria-controls": "collapseTwo"
+      }, "Step 2: More comments"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "collapseTwo",
+        className: "collapse",
+        "aria-labelledby": "headingTwo",
+        "data-parent": "#accordionMain"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card-body",
+        id: "my-card-body"
+      }, "Second Body"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "mybreak"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card",
+        id: "my-card"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "my-card-header",
+        id: "headingThree"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "mb-0"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "card-heading",
+        className: "collapsed",
+        role: "button",
+        "data-toggle": "collapse",
+        "data-target": "#collapseThree",
+        "aria-expanded": "false",
+        "aria-controls": "collapseThree"
+      }, "Step 3: Final comments"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "collapseThree",
+        className: "collapse",
+        "aria-labelledby": "headingThree",
+        "data-parent": "#accordionMain"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "card-body",
+        id: "my-card-body"
+      }, "Third body")))))));
+    }
+  }]);
+
+  return DataformApp;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
 
 if (document.getElementById('dataformApp')) {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(DataformApp, null), document.getElementById('dataformApp'));

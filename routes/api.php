@@ -17,5 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::resource('form', 'Api\FormController');
+// Some basic requests
 Route::get('form', 'Api\FormController@index');
+Route::post('form', 'Api\FormController@store');
+Route::get('form/{id}', 'Api\FormController@show');
