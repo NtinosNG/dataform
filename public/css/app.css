@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+#dropdown-btn {
+  color: grey;
+  background-color: white;
+  box-shadow: inset 0 -3em 3em rgba(255, 255, 255, 0.534);
+}
+
 #next-btn {
   position: relative;
   padding-left: 40px;
@@ -12,8 +18,20 @@
   text-shadow: 1px 1px 2px black;
 }
 
+#myCommentBox {
+  resize: none;
+  border-radius: 10px;
+  box-shadow: inset 0 -3em 3em rgba(255, 255, 255, 0.534);
+}
+
 #text-field {
   border-radius: 10px;
+  box-shadow: inset 0 -3em 3em rgba(255, 255, 255, 0.1);
+}
+
+#text-field-date {
+  border-radius: 10px;
+  width: 100%;
   box-shadow: inset 0 -3em 3em rgba(255, 255, 255, 0.1);
 }
 

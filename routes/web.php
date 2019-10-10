@@ -11,12 +11,6 @@
 |
 */
 
-Route::get('/', function () {
+// Wildcard route as we use React Router to handle routing
+Route::view('/{path?}', 'main');
 
-    // Testing fetching data from the forms table
-
-    // $Forms = DB::Table('forms')->get();
-    // return $Forms;
-
-    return view('main');
-});
