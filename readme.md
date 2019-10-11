@@ -84,3 +84,69 @@ php artisan serve
 
 The second command will provide you with a localhost address where you can see the project live on your browser.
 
+## What works and what was built so far
+
+Regarding the design, it can be seen from the figures 1-3 that, a very close approximation was created based on the original mock-up.
+
+<figure>
+  <img src="https://raw.githubusercontent.com/NtinosNG/dataform/master/screenshots/details.png" width="80%" alt="Details Section">
+  <figcaption>Figure 1 - Step 1: Your Details section.</figcaption>
+</figure>
+
+ <br/>
+
+ <figure>
+    <img src="https://raw.githubusercontent.com/NtinosNG/dataform/master/screenshots/comments.png" width="80%" alt="Comments Section"> 
+    <figcaption>Figure 2 - Step 2: More Comments section.</figcaption>
+</figure>
+
+<br/>
+
+ <figure>
+   <img src="https://raw.githubusercontent.com/NtinosNG/dataform/master/screenshots/final-comments.png" width="80%" alt="Final Comments Section"> 
+    <figcaption>Figure 3 - Step 3: Final Comments section.</figcaption>
+</figure>
+
+ <br/>
+
+Additionally, from figure 4 it can be seen that the last *Next* button attempts a form submission as the data will appear on the address bar after the button is clicked.
+ 
+ <figure>
+    <img src="https://raw.githubusercontent.com/NtinosNG/dataform/master/screenshots/form-submit-get-data.gif" width="80%" alt="Details Section"> 
+    <figcaption>Figure 4 - Data are being submitted through the from.</figcaption>
+</figure>
+
+</br>
+
+ From figure 5, it  can be seen that the sections animate as requested in the requirements. Navigation can be done by either clicking on the section titles or the *Next* buttons except for the last one which, as mentioned before, submits the form.
+
+<figure>
+    <img src="https://raw.githubusercontent.com/NtinosNG/dataform/master/screenshots/form-animations.gif" width="80%" alt="Details Section">  
+    <figcaption>Figure 5 - Form's design animations.</figcaption>
+</figure>
+
+<br/>
+
+From figure 6, it can be seen that, if you navigate on the path `/api/form` you can access directly the data that you have inserted upon the installation process in a Json form. Addtionally, if you add the on the path an id number e.g. `api/form/1` you can access a single entry if it exists.
+
+<figure>
+    <img src="https://raw.githubusercontent.com/NtinosNG/dataform/master/screenshots/data-from-laravel-api.gif" width="80%" alt="Details Section">
+    <figcaption>Figure 6 - Accessing data from Laravel API route.</figcaption>
+</figure>
+
+ <br/>
+
+ From figure 7, it can be seen that the existing data are being retrieved with the use of Axios Http client on React. You can test it by yourself by clicking inspect on your browser and look on your console for the *Forms* array under the *State* object.
+
+ <figure>
+    <img src="https://raw.githubusercontent.com/NtinosNG/dataform/master/screenshots/data-through-axios.gif" width="80%" alt="Details Section"> 
+    <figcaption>Figure 7 - Accessing data state through Axios Http client.</figcaption>
+</figure>
+
+
+
+
+
+
+
+
