@@ -73258,7 +73258,22 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Form).call(this));
     _this.state = {
-      forms: []
+      firstName: null,
+      Surname: null,
+      email: null,
+      mobile: null,
+      gender: null,
+      birthday: null,
+      comments: null,
+      formErrors: {
+        firstName: "",
+        Surname: "",
+        email: "",
+        mobile: "",
+        gender: "",
+        birthday: "",
+        comments: ""
+      }
     };
     console.log(_this = _possibleConstructorReturn(this, _getPrototypeOf(Form).call(this)));
     return _this;
@@ -73285,9 +73300,11 @@ function (_Component) {
         id: "mycontainer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row justify-content-center"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "col-md-8",
-        id: "mycol"
+        id: "mycol",
+        onSubmit: this.handleSubmit,
+        noValidate: true
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "accordion",
         id: "accordionMain"
@@ -73317,38 +73334,54 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-4"
+        className: "col-4 firstName"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "firstName",
         id: "text-field-title"
       }, "First Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        // className={}
         id: "text-field",
         type: "text",
-        name: "firstname"
+        name: "firstName",
+        onChange: this.handleChange,
+        noValidate: true
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-4"
+        className: "col-4 surname"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "surname",
         id: "text-field-title"
       }, "Surname"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        // className={}
         id: "text-field",
         type: "text",
-        name: "lastname"
+        name: "surname",
+        onChange: this.handleChange,
+        noValidate: true
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-4"
+        className: "col-4 email"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "email",
         id: "text-field-title"
       }, "Email Address"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        // className={}
         id: "text-field",
         type: "text",
-        name: "email"
+        name: "email",
+        onChange: this.handleChange,
+        noValidate: true
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-12"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        id: "next-btn",
-        type: "button"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        role: "button",
+        "data-toggle": "collapse",
+        "data-target": "#collapseTwo",
+        "aria-expanded": "false",
+        "aria-controls": "collapseTwo",
+        id: "next-btn"
       }, "Next ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fa fa-angle-right"
       }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -73380,71 +73413,86 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-4"
+        className: "col-4 mobileNumber"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "mobileNumber",
         id: "text-field-title"
       }, "Telephone Number"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        // className={}
         id: "text-field",
         type: "text",
-        name: "phonenumber"
+        name: "mobileNumber",
+        onChange: this.handleChange,
+        noValidate: true
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-4"
+        className: "col-4 gender"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "gender",
         id: "text-field-title"
       }, "Gender"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "dropdown"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-secondary dropdown-toggle",
-        type: "button",
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         id: "dropdown-btn",
-        "data-toggle": "dropdown",
-        "aria-haspopup": "true",
-        "aria-expanded": "false"
-      }, "Select Gender"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "dropdown-menu",
-        "aria-labelledby": "dropdownMenu2"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "dropdown-item",
-        type: "button"
-      }, "Male"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "dropdown-item",
-        type: "button"
-      }, "Female"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "dropdown-item",
-        type: "button"
+        name: "gender",
+        className: "dropdown"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: ""
+      }, "Select Gender"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "male",
+        className: "dropdown-item"
+      }, "Male"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "female",
+        className: "dropdown-item"
+      }, "Female"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "other",
+        className: "dropdown-item"
       }, "Other"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-4"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "birthday",
         id: "text-field-title"
       }, "Date of birth"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-4"
+        className: "col-4 birthday"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        // className={}
         id: "text-field-date",
         type: "text",
-        name: "day"
+        name: "day",
+        onChange: this.handleChange,
+        noValidate: true
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-4"
+        className: "col-4 birthday"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        // className={}                                                        
         id: "text-field-date",
         type: "text",
-        name: "month"
+        name: "month",
+        onChange: this.handleChange,
+        noValidate: true
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-4"
+        className: "col-4 birthday"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        // className={}                                                         
         id: "text-field-date",
         type: "text",
-        name: "year"
+        name: "year",
+        onChange: this.handleChange,
+        noValidate: true
       }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-12"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        id: "next-btn",
-        type: "button"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        role: "button",
+        "data-toggle": "collapse",
+        "data-target": "#collapseThree",
+        "aria-expanded": "false",
+        "aria-controls": "collapseThree",
+        id: "next-btn"
       }, "Next ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fa fa-angle-right"
       }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -73476,22 +73524,26 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-xl-11"
+        className: "col-xl-11 comments"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
-      }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "comments",
         id: "text-field-title"
       }, "Comments")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        // className={}                                                 
         id: "myCommentBox",
         cols: "40",
         rows: "5",
-        name: "comments"
+        name: "comments",
+        onChange: this.handleChange,
+        noValidate: true
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-12"
       }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         id: "next-btn",
-        type: "button"
-      }, "Next", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        type: "submit"
+      }, "Next ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fa fa-angle-right"
       })))))))))));
     }

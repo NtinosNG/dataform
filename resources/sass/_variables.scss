@@ -20,84 +20,95 @@ $cyan: #6cb2eb;
 
 
 #dropdown-btn {
-  color: grey;
-  background-color: white;
-  box-shadow: 
-    inset 0 -3em 3em rgba(255, 255, 255, 0.534);
+color: grey;
+padding-top: 5px;
+padding-bottom: 5px;
+border-radius: 10px;
+background-color: white;
+text-shadow: 1px 1px 1px rgb(196, 196, 196);
+box-shadow: 
+inset 0 -3em 3em rgba(245, 245, 245, 0.911);
 }
 
 #next-btn {
-    position: relative;
-    padding-left: 40px;
-    padding-right: 40px;
-    float: right;
-    border-radius: 10px;
-    text-align: center;
-    background-color: rgb(89, 89, 226);
-    color: white;
-    text-shadow: 1px 1px 2px black;
-
+position: relative;
+padding-left: 40px;
+padding-right: 40px;
+float: right;
+border-radius: 10px;
+text-align: center;
+background-color: rgb(89, 89, 226);
+color: white;
+text-shadow: 1px 1px 2px black;
+box-shadow: none;
 }
 
+#card-heading:hover, #next-btn:hover {
+cursor: pointer;
+}  
+
+#myform {
+border-radius: 15px !important;
+}
 
 #myCommentBox {
-    resize: none;
-    border-radius: 10px;
-    box-shadow: 
-      inset 0 -3em 3em rgba(255, 255, 255, 0.534);
+resize: none;
+border-radius: 10px;
+box-shadow: 
+inset 0 -3em 3em rgba(255, 255, 255, 0.534);
 }
 
 #text-field {
-    border-radius: 10px;
-    box-shadow: 
-        inset 0 -3em 3em rgba(255, 255, 255, 0.1);
+border-radius: 10px;
+box-shadow: 
+inset 0 -3em 3em rgba(255, 255, 255, 0.1);
 }
 
 #text-field-date {
-  border-radius: 10px;
-  width: 100%;
-  box-shadow: 
-      inset 0 -3em 3em rgba(255, 255, 255, 0.1);
+border-radius: 10px;
+width: 100%;
+box-shadow: 
+inset 0 -3em 3em rgba(255, 255, 255, 0.1);
 
 }
 
 #text-field-title {
-    color: black;
-    font-weight: bolder;
+color: black;
+font-weight: bolder;
 }
 
 
-  #my-card {
-    background-color: #b3d2ec;
-    border-radius: 15px;
-  }
+#my-card {
+background-color: #b3d2ec;
+border-radius: 15px;
+}
 
 .my-card-header, #my-card-body {
-      background-color: #dae1e7;
-  }
+background-color: #dae1e7;
+}
 
-  #mybreak {
-      margin-bottom: 5px;
-  }
+#mybreak {
+margin-bottom: 5px;
+}
 
-  #mycol {
-    background-color: white;
-  }
- 
-  #mycol {
-      margin-top: 150px;
-      padding: 2px;
-      border-radius: 15px;
-      box-shadow: 
-       inset 0 -3em 3em rgba(0,0,0,0.1), 
-             0 0  0 2px rgb(255,255,255),
-             0.3em 0.3em 1em rgba(0,0,0,0.5);
-  }
+#mycol {
+background-color: white;
+}
+
+#mycol {
+margin-top: 150px;
+padding: 2px;
+border-radius: 15px;
+box-shadow: 
+inset 0 -3em 3em rgba(0,0,0,0.1), 
+0 0  0 2px rgb(255,255,255),
+0.3em 0.3em 1em rgba(0,0,0,0.5);
+}
 
 #card-heading {
-    text-shadow: 1px 1px 2px black;
-    color: rgba(255, 255, 255, 0.842);
-    background-color: rgb(243, 186, 0);
-    padding: 15px;
-    border-radius: 15px;
+text-shadow: 1px 1px 2px black;
+color: rgba(255, 255, 255, 0.842);
+background-color: rgb(243, 186, 0);
+padding: 15px;
+border-radius: 15px;
 }
