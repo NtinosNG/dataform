@@ -1,74 +1,86 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+## Requirements
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+In order to run this project, first you need to make sure that you have the following requirements installed on your computer:
 
-## About Laravel
+- php (version 7.2.19 was used)
+- MySQL (version 5.7.24 was used)
+- node.js (v10.16.3 (LTS) was used)
+- composer (version 1.9.0 was used)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## How to install
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+First, clone this repository.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Second, open the project directory and run the following command in a terminal (git bash was used on Windows):
 
-## Learning Laravel
+```
+cp .env.example .env
+```
+this will make a copy of the .env file where you will need to add information for the database and the project.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Third, run the following commands to install node and laravel dependencies:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+> For node
 
-## Laravel Sponsors
+```
+npm install
+```
+> For laravel
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```
+composer install
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+Next, run this additional command to generate an encryption key that is required for your .env file.
 
-## Contributing
+```
+php artisan key:generate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+At this point, if no errors have been occured upon running the above commands, all the dependencies should be installed.
 
-## Security Vulnerabilities
+The last step is to create a database and add some initial data for testing the API.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+First create a database with a name of your choosing and open the .env file to include the name of the DB, the username and the password (if any) in the fields:
 
-## License
+- DB_DATABASE= (any name)
+- DB_USERNAME= (username, default is root)
+- DB_PASSWORD= (leave empty if not given any)
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Next, start the database (e.g. within XAMPP, Laragon if on Windows) and run the following command to make the database migrations and install the tables for the project on the database:
+
+```
+php artisan migrate
+```
+If no errors have been occured you should see something similar to the following on your terminal:
+
+```
+Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table (0.08 seconds)
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table (0.13 seconds)
+Migrating: 2019_08_19_000000_create_failed_jobs_table
+Migrated:  2019_08_19_000000_create_failed_jobs_table (0.08 seconds)
+Migrating: 2019_10_09_194933_create_forms_table
+Migrated:  2019_10_09_194933_create_forms_table (0.08 seconds)
+```
+
+Next, within a database management program (like phpmyadmin for example), find the database you have created and add some initial data in the **Forms** table.
+
+Lastly, open two separated terminal windows in the project folder and run the following commands:
+
+> Window 1 - Running node for live rendering of changes.
+
+```
+npm run watch
+```
+
+> Window 2 - Running laravel internal server.
+
+```
+php artisan serve
+```
+
+The second command will provide you with a localhost address where you can see the project live on your browser.
+
